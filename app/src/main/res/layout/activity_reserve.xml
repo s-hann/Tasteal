@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Reserve">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+            android:id="@+id/tv_reserve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reserve Your Seat!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_margin="30dp"
+            />
+
+            <EditText
+                android:id="@+id/input_nama"
+                android:layout_below="@id/tv_reserve"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:hint="Reservee name"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tv_orang"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="285dp"
+                android:layout_below="@id/input_nama"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Total of people"
+                android:textColor="@color/black"
+                />
+
+            <Spinner
+                android:id="@+id/total_orang"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/tv_orang"
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:entries="@array/pilihanJumlahOrang"
+                android:ems="10"
+                />
+
+            <TextView
+                android:id="@+id/tv_spot"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="285dp"
+                android:layout_below="@id/total_orang"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Eating location"
+                android:textColor="@color/black"
+                />
+
+            <Spinner
+                android:id="@+id/posisi_duduk"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/tv_spot"
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:entries="@array/pilihanTempatDuduk"
+                android:ems="10"
+                />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="285dp"
+                android:layout_below="@id/posisi_duduk"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Reservation date"
+                android:textColor="@color/black"
+                />
+
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:layout_gravity="center"
+                android:id="@+id/dp_reservation"
+                android:layout_below="@id/tv_date"/>
+
+
+            <EditText
+                android:id="@+id/input_telp"
+                android:layout_below="@id/dp_reservation"
+                android:layout_margin="10dp"
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:hint="Phone number"
+                android:inputType="phone" />
+
+            <Button
+                android:id="@+id/btn_reserve"
+                android:layout_margin="20dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/input_telp"
+                android:layout_centerHorizontal="true"
+                android:text="Reserve" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
